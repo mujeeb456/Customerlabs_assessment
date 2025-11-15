@@ -1,4 +1,3 @@
-// controllers/log.controller.js
 const Log = require('../models/Log');
 const Account = require('../models/Account');
 
@@ -14,7 +13,6 @@ exports.getLogs = async (req, res) => {
 
     if (destination_id) filter.destination = destination_id;
 
-    // If filtering by account_id (string form)
     if (account_id) {
       const account = await Account.findOne({ account_id });
       if (!account)

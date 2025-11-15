@@ -1,4 +1,3 @@
-// routes/incoming.routes.js
 const router = require('express').Router();
 const { receiveData } = require('../controllers/incoming.controller');
 const { incomingValidator } = require('../utils/validators');

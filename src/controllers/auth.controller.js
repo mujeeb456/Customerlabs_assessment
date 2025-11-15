@@ -1,4 +1,3 @@
-// controllers/auth.controller.js
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const Role = require('../models/Role');
@@ -46,7 +45,6 @@ exports.login = async (req, res) => {
     if (!ok)
       return res.status(400).json({ success: false, message: "Invalid credentials" });
 
-    // Default for this assignment: first registered user = Admin
     const token = jwt.sign(
       { id: user._id, role: "Admin" },
       process.env.JWT_SECRET,

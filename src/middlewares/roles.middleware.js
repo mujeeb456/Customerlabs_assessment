@@ -1,4 +1,3 @@
-// middlewares/roles.middleware.js
 
 exports.requireAdmin = (req, res, next) => {
   if (req.user.role_claim !== "Admin")

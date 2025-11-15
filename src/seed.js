@@ -1,4 +1,4 @@
-// seed.js
+
 require('dotenv').config({ path: require('path').resolve(__dirname, '..', '.env') });
 const connectDB = require("./config/db");
 const Role = require("./models/Role");

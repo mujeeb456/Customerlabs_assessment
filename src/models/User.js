@@ -1,4 +1,3 @@
-// models/User.js
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
@@ -12,7 +11,6 @@ const UserSchema = new mongoose.Schema({
   updated_by: { type: String, required: true, default: "system" }
 });
 
-// Hash password
 UserSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   const salt = await bcrypt.genSalt(10);
@@ -20,7 +18,6 @@ UserSchema.pre('save', async function (next) {
   next();
 });
 
-// Compare password
 UserSchema.methods.comparePassword = function (candidate) {
   return bcrypt.compare(candidate, this.password);
 };

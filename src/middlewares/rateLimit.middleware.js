@@ -1,9 +1,8 @@
-// middlewares/rateLimit.middleware.js
 const rateLimit = require('express-rate-limit');
 
 exports.createAccountRateLimiter = (getKey) =>
   rateLimit({
-    windowMs: 1000, // 1 sec
+    windowMs: 1000, 
     max: 5,
     keyGenerator: getKey,
     handler: (req, res) =>

@@ -1,4 +1,3 @@
-// controllers/incoming.controller.js
 const Account = require('../models/Account');
 const Log = require('../models/Log');
 const sendQueue = require('../services/queue');

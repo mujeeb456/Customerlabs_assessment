@@ -1,4 +1,3 @@
-// controllers/account.controller.js
 const Account = require("../models/Account");
 const Role = require("../models/Role");
 const AccountMember = require("../models/AccountMember");
@@ -17,7 +16,6 @@ exports.createAccount = async (req, res) => {
       updated_by: req.user._id
     });
 
-    // Assign creator as Admin Member
     const adminRole = await Role.findOne({ role_name: "Admin" });
 
     await AccountMember.create({
@@ -56,7 +54,6 @@ exports.deleteAccount = async (req, res) => {
 
     await Account.findByIdAndDelete(id);
 
-    // Cascading deletions
     const Destination = require("../models/Destination");
     const Log = require("../models/Log");
 

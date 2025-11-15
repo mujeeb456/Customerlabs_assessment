@@ -1,4 +1,3 @@
-// models/AccountMember.js
 const mongoose = require('mongoose');
 
 const AccountMemberSchema = new mongoose.Schema({

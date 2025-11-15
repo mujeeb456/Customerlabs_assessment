@@ -1,4 +1,3 @@
-// routes/auth.routes.js
 const router = require("express").Router();
 const { signup, login } = require("../controllers/auth.controller");
 const { signupValidator } = require("../utils/validators");
